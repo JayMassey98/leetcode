@@ -1,0 +1,35 @@
+Disassembled Python bytecode of file "number_of_steps.py", interpreted with Python 3.11:
+
+  0           0 RESUME                   0
+
+ 32           2 LOAD_CONST               0 ('value')
+              4 LOAD_NAME                0 (int)
+              6 LOAD_CONST               1 ('return')
+              8 LOAD_NAME                0 (int)
+             10 BUILD_TUPLE              4
+             12 LOAD_CONST               2 (<code object number_of_steps at 0x5604810d7cf0, file "number_of_steps.py", line 32>)
+             14 MAKE_FUNCTION            4 (annotations)
+             16 STORE_NAME               1 (number_of_steps)
+             18 LOAD_CONST               3 (None)
+             20 RETURN_VALUE
+
+Disassembly of <code object number_of_steps at 0x5604810d7cf0, file "number_of_steps.py", line 32>:
+
+ 32           0 RESUME                   0
+
+ 36           2 LOAD_GLOBAL              1 (NULL + max)
+             14 LOAD_FAST                1 (value)
+             16 LOAD_METHOD              1 (bit_length)
+             38 PRECALL                  0
+             42 CALL                     0
+             52 LOAD_CONST               1 (1)
+             54 BINARY_OP               10 (-)
+             58 LOAD_FAST                1 (value)
+             60 LOAD_METHOD              2 (bit_count)
+             82 PRECALL                  0
+             86 CALL                     0
+             96 BINARY_OP                0 (+)
+            100 LOAD_CONST               2 (0)
+            102 PRECALL                  2
+            106 CALL                     2
+            116 RETURN_VALUE
