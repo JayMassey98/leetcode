@@ -1,0 +1,95 @@
+Disassembled Python bytecode of file "roman_to_integer.py", interpreted with Python 3.11:
+
+  0           0 RESUME                   0
+
+ 26           2 LOAD_CONST               0 ('numeral')
+              4 LOAD_NAME                0 (str)
+              6 LOAD_CONST               1 ('return')
+              8 LOAD_NAME                1 (int)
+             10 BUILD_TUPLE              4
+             12 LOAD_CONST               2 (<code object roman_to_integer at 0x55a7bb795450, file "roman_to_integer.py", line 26>)
+             14 MAKE_FUNCTION            4 (annotations)
+             16 STORE_NAME               2 (roman_to_int)
+             18 LOAD_CONST               3 (None)
+             20 RETURN_VALUE
+
+Disassembly of <code object roman_to_int at 0x55a7bb795450, file "roman_to_integer.py", line 26>:
+
+ 26           0 RESUME                   0
+
+ 29           2 LOAD_CONST               1 (1)
+
+ 30           4 LOAD_CONST               2 (5)
+
+ 31           6 LOAD_CONST               3 (10)
+
+ 32           8 LOAD_CONST               4 (50)
+
+ 33          10 LOAD_CONST               5 (100)
+
+ 34          12 LOAD_CONST               6 (500)
+
+ 35          14 LOAD_CONST               7 (1000)
+
+ 28          16 LOAD_CONST               8 (('I', 'V', 'X', 'L', 'C', 'D', 'M'))
+             18 BUILD_CONST_KEY_MAP      7
+             20 STORE_FAST               2 (symbols)
+
+ 38          22 LOAD_CONST               9 (2)
+
+ 39          24 LOAD_CONST               9 (2)
+
+ 40          26 LOAD_CONST              10 (20)
+
+ 41          28 LOAD_CONST              10 (20)
+
+ 42          30 LOAD_CONST              11 (200)
+
+ 43          32 LOAD_CONST              11 (200)
+
+ 37          34 LOAD_CONST              12 ((('I', 'V'), ('I', 'X'), ('X', 'L'), ('X', 'C'), ('C', 'D'), ('C', 'M')))
+             36 BUILD_CONST_KEY_MAP      6
+             38 STORE_FAST               3 (reductions)
+
+ 45          40 LOAD_CONST              13 (0)
+             42 STORE_FAST               4 (output)
+
+ 46          44 LOAD_CONST               0 (None)
+             46 STORE_FAST               5 (last_symbol)
+
+ 48          48 LOAD_FAST                1 (numeral)
+             50 GET_ITER
+        >>   52 FOR_ITER                47 (to 148)
+             54 STORE_FAST               6 (symbol)
+
+ 51          56 LOAD_FAST                6 (symbol)
+             58 LOAD_FAST                2 (symbols)
+             60 CONTAINS_OP              1
+             62 POP_JUMP_FORWARD_IF_FALSE     3 (to 70)
+
+ 52          64 POP_TOP
+             66 LOAD_CONST              13 (0)
+             68 RETURN_VALUE
+
+ 55     >>   70 LOAD_FAST                4 (output)
+             72 LOAD_FAST                2 (symbols)
+             74 LOAD_FAST                6 (symbol)
+             76 BINARY_SUBSCR
+             86 LOAD_FAST                3 (reductions)
+             88 LOAD_METHOD              0 (get)
+            110 LOAD_FAST                5 (last_symbol)
+            112 LOAD_FAST                6 (symbol)
+            114 BUILD_TUPLE              2
+            116 LOAD_CONST              13 (0)
+            118 PRECALL                  2
+            122 CALL                     2
+            132 BINARY_OP               10 (-)
+            136 BINARY_OP               13 (+=)
+            140 STORE_FAST               4 (output)
+
+ 58         142 LOAD_FAST                6 (symbol)
+            144 STORE_FAST               5 (last_symbol)
+            146 JUMP_BACKWARD           48 (to 52)
+
+ 60     >>  148 LOAD_FAST                4 (output)
+            150 RETURN_VALUE
