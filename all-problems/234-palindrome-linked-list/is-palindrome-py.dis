@@ -1,0 +1,135 @@
+Disassembled Python bytecode of file "is-palindrome.py", interpreted with Python 3.11:
+
+  0           0 RESUME                   0
+
+ 34           2 PUSH_NULL
+              4 LOAD_BUILD_CLASS
+              6 LOAD_CONST               0 (<code object ListNode at 0x558a0c014c50, file "is-palindrome.py", line 34>)
+              8 MAKE_FUNCTION            0
+             10 LOAD_CONST               1 ('ListNode')
+             12 PRECALL                  2
+             16 CALL                     2
+             26 STORE_NAME               0 (ListNode)
+
+ 40          28 LOAD_CONST               2 ('head')
+             30 LOAD_NAME                1 (Optional)
+             32 LOAD_NAME                0 (ListNode)
+             34 BINARY_SUBSCR
+             44 LOAD_CONST               3 ('return')
+             46 LOAD_NAME                2 (bool)
+             48 BUILD_TUPLE              4
+             50 LOAD_CONST               4 (<code object is_palindrome at 0x558a0bfadd10, file "is-palindrome.py", line 40>)
+             52 MAKE_FUNCTION            4 (annotations)
+             54 STORE_NAME               3 (is_palindrome)
+             56 LOAD_CONST               5 (None)
+             58 RETURN_VALUE
+
+Disassembly of <code object ListNode at 0x558a0c014c50, file "is-palindrome.py", line 34>:
+
+ 34           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('ListNode')
+              8 STORE_NAME               2 (__qualname__)
+
+ 35          10 LOAD_CONST               4 ((0, None))
+             12 LOAD_CONST               3 (<code object __init__ at 0x558a0bfc1290, file "is-palindrome.py", line 35>)
+             14 MAKE_FUNCTION            1 (defaults)
+             16 STORE_NAME               3 (__init__)
+             18 LOAD_CONST               2 (None)
+             20 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x558a0bfc1290, file "is-palindrome.py", line 35>:
+
+ 35           0 RESUME                   0
+
+ 36           2 LOAD_FAST                1 (value)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (value)
+
+ 37          16 LOAD_FAST                2 (next)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               1 (next)
+             30 LOAD_CONST               0 (None)
+             32 RETURN_VALUE
+
+Disassembly of <code object is_palindrome at 0x558a0bfadd10, file "is-palindrome.py", line 40>:
+
+ 40           0 RESUME                   0
+
+ 42           2 LOAD_FAST                1 (head)
+              4 POP_JUMP_FORWARD_IF_NOT_NONE     2 (to 10)
+              6 LOAD_CONST               1 (False)
+              8 RETURN_VALUE
+
+ 45     >>   10 LOAD_FAST                1 (head)
+             12 COPY                     1
+             14 STORE_FAST               2 (forward)
+             16 STORE_FAST               3 (double_step)
+
+ 46          18 LOAD_CONST               0 (None)
+             20 STORE_FAST               4 (reverse)
+
+ 57          22 LOAD_FAST                3 (double_step)
+             24 POP_JUMP_FORWARD_IF_FALSE    46 (to 118)
+             26 LOAD_FAST                3 (double_step)
+             28 LOAD_ATTR                0 (next)
+             38 POP_JUMP_FORWARD_IF_FALSE    39 (to 118)
+
+ 60     >>   40 LOAD_FAST                3 (double_step)
+             42 LOAD_ATTR                0 (next)
+             52 LOAD_ATTR                0 (next)
+             62 STORE_FAST               3 (double_step)
+
+ 63          64 LOAD_FAST                2 (forward)
+             66 LOAD_ATTR                0 (next)
+             76 STORE_FAST               5 (next_step)
+
+ 64          78 LOAD_FAST                4 (reverse)
+             80 LOAD_FAST                2 (forward)
+             82 STORE_ATTR               0 (next)
+
+ 65          92 LOAD_FAST                2 (forward)
+             94 STORE_FAST               4 (reverse)
+
+ 66          96 LOAD_FAST                5 (next_step)
+             98 STORE_FAST               2 (forward)
+
+ 57         100 LOAD_FAST                3 (double_step)
+            102 POP_JUMP_FORWARD_IF_FALSE     7 (to 118)
+            104 LOAD_FAST                3 (double_step)
+            106 LOAD_ATTR                0 (next)
+            116 POP_JUMP_BACKWARD_IF_TRUE    39 (to 40)
+
+ 81     >>  118 LOAD_FAST                3 (double_step)
+            120 POP_JUMP_FORWARD_IF_FALSE     7 (to 136)
+
+ 84         122 LOAD_FAST                2 (forward)
+            124 LOAD_ATTR                0 (next)
+            134 STORE_FAST               2 (forward)
+
+ 91     >>  136 LOAD_FAST                2 (forward)
+            138 POP_JUMP_FORWARD_IF_FALSE    34 (to 208)
+
+ 93     >>  140 LOAD_FAST                4 (reverse)
+            142 LOAD_ATTR                1 (value)
+            152 LOAD_FAST                2 (forward)
+            154 LOAD_ATTR                1 (value)
+            164 COMPARE_OP               3 (!=)
+            170 POP_JUMP_FORWARD_IF_FALSE     2 (to 176)
+            172 LOAD_CONST               1 (False)
+            174 RETURN_VALUE
+
+ 95     >>  176 LOAD_FAST                4 (reverse)
+            178 LOAD_ATTR                0 (next)
+            188 STORE_FAST               4 (reverse)
+
+ 96         190 LOAD_FAST                2 (forward)
+            192 LOAD_ATTR                0 (next)
+            202 STORE_FAST               2 (forward)
+
+ 91         204 LOAD_FAST                2 (forward)
+            206 POP_JUMP_BACKWARD_IF_TRUE    34 (to 140)
+
+ 98     >>  208 LOAD_CONST               2 (True)
+            210 RETURN_VALUE
